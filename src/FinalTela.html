@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela final</title>
+    <style>
+
+        #buttonsContainer {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Move o elemento para o centro */
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: rgb(21, 138, 3);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+        }            
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff; /* Fundo da página */
+        }
+
+        canvas {
+            border: 2px solid white; /* Borda para destacar o canvas */
+        }
+
+    </style>
+</head>
+<body>
+    <audio id="background-music" src="../Sprites/soundtrack.mp3" loop></audio>
+    
+
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    
+
+    <div id="buttonsContainer">
+        <button class="button" id="startButton">INICIAR</button>
+        <button class="button" id="closeTabButton">SAIR</button>
+
+    </div>
+    <script src="FinalTela.js"></script>
+</body>
+</html>
