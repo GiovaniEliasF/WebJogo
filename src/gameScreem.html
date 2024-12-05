@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo com Fundo</title>
+    <style>
+
+        #buttonsContainer2 {
+            position: absolute;
+            top: 95%;
+            left: 95%;
+            transform: translate(-50%, -50%); /* Move o elemento para o centro */
+        }
+
+        /* Estilos básicos para o corpo */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Estilos para os botões */
+        button {
+        background-color: rgb(21, 138, 3); /* Cor de fundo */
+        color: white; /* Cor do texto */
+        border: none; /* Remove bordas */
+        padding: 10px 20px; /* Espaçamento interno */
+        text-align: center; /* Centraliza texto */
+        text-decoration: none; /* Remove sublinhado */
+        display: inline-block; /* Para funcionar bem com margens */
+        font-size: 15px; /* Tamanho do texto */
+        margin: 6px; /* Espaço entre os botões */
+        cursor: pointer; /* Mostra cursor de mão */
+        border-radius: 8px; /* Bordas arredondadas */
+        transition: background-color 0.3s; /* Transição suave */
+        }
+
+        /* Efeito ao passar o mouse */
+        button:hover {
+        background-color: rgb(21, 138, 3); /* Cor ao passar o mouse */
+        }
+
+        /* Estilo para botão desativado */
+        button:disabled {
+        background-color: rgb(0, 0, 0); /* Cor para botão desativado */
+        cursor: not-allowed; /* Cursor de não permitido */
+        }
+
+        /* Personalização adicional para o botão de pausa */
+        #pause-music {
+        background-color: rgb(21, 138, 3); /* Cor de pausa (vermelho) */
+        }
+
+        #pause-music:hover {
+        background-color: rgb(21, 138, 3); /* Tom mais escuro ao passar o mouse */
+        }
+
+
+        #buttonsContainer {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Move o elemento para o centro */
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: rgb(21, 138, 3);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+        }            
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff; /* Fundo da página */
+        }
+
+        canvas {
+            border: 2px solid white; /* Borda para destacar o canvas */
+        }
+
+    </style>
+</head>
+<body>
+    <audio id="background-music" src="../Sprites/soundtrack.mp3" loop></audio>
+    
+
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    
+
+    <div id="buttonsContainer">
+        <button class="button" id="startButton">INICIAR</button>
+        <button class="button" id="closeTabButton">SAIR</button>
+
+    </div>
+    <div id="buttonsContainer2">
+        <button id="play-music">on🔊</button>
+        <button id="pause-music" disabled>off🔈</button>
+
+    </div>
+    <script src="gameScreem.js"></script>
+</body>
+</html>
